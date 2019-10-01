@@ -3,16 +3,95 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/jsObjects.css">
-    <title>JavaScript Objects</title>
-</head>
-<body>
-    <div class="jumbotron text-center">
-        <h2>Javascript Objects, Inheritance, Properties, Methods, Instantiation</h1>
-    </div>
+    <link rel="stylesheet" type="text/css" href="../css/jsObjects.css">
     
+    <title>JavaScript Objects</title>
+
+    <div class="jumbotron text-center">
+            <h2>Javascript Objects, Inheritance, Properties, Methods, Instantiation</h1>
+    </div>
+</head>
+<body>    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div id="main">
+                    <h4 class="text-center">Objects</h4>
+                    <p>JavaScript is almost entirely made up of objects.  Dates, math, regular expressions, arrays, 
+                        and functions are always objects. Booleans, numbers and strings are “primitive” values, 
+                        unless defined the the keyword “new”. A primitive value has no properties or methods and are 
+                        hardcoded so they cannot be changed. Null, and undefined are “primitive” values.
+                        <br><br>
+                        Examples of primitive values:</p>
+                    <p id="code">
+                        Boolean(true); <br>
+                        String(&ldquo;abc&rdquo;); <br>
+                        Number(123);</p> <br>
+                    <p>Examples of objects:</p>
+                    <p id="code">new Boolean(true);<br>
+                            new String(“abc”);<br>
+                            new Number(123);</p><br>
+                    <h4 class="text-center">Object Creation and Properties</h4>
+                    <p>An object can be created with an object literal, where the property and values are defined at
+                        declaration in curly braces and separated by a comma. The properties of the javascript object 
+                        can be accessed by dot notation or bracket notation</p>
+                    <p id="code">var car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
+                            &emsp;or<br>
+                            var car = {<br>
+                               &emsp; model: ‘Montero’,<br>
+                               &emsp; manufacturer: ’Mitsubishi’<br>
+                            };	<br>
+                            console.log(car.model);    // Output Montero<br>
+                            console.log(car[‘manufacturer’]);  //Output Mitsubishi<br>
+                    </p>
+                    <p>Additional properties can be added after creation using the dot notation</p>
+                    <p id="code">var car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
+                            car.color = “Silver”;
+                    </p>
+                    <p>Objects can also be created with a constructor</p>
+                    <p id="code">function Car(model, manufacturer) { <br>
+                            &emsp;this.model = model;<br>
+                            &emsp;this.manufacturer = manufacturer;<br>
+                        }<br>
+                        var car1 = new Car(“Montero”, “Mitsubishi”);
+                    </p>
+                    <h4 class="text-center">Object Methods</h4>
+                    <p>Methods can be created for an objecting using function()</p>
+                    <p id="code">car.description = function() { <br>
+                            &emsp;return this.manufacturer + ‘ ‘ + this.model + ‘ ‘ + this.color; <br>
+                        };
+                    </p>
+                    <p>Object methods can be accessed with the syntax objectName.methodName();</p>
+                    <p id="code">console.log(car.description());  <br>&emsp;// output Mitsubishi Montero Silver</p>
+                    <h4 class="text-center">Instantiation</h4>
+                    <p>If one wants to create more than one “instance” of an object (lets go with the 
+                        above example of the car object), one should encapsulate the logic inside a function 
+                        that can called whenever needed to create a new car. This is called Functional 
+                        Instantiation and is basically a constructor function.</p>
+                    <p id="code">function Car (model, manufacturer, color) { <br>
+                            &emsp;var car = {}<br>
+                            &emsp;car.model = model<br>
+                            &emsp;car. manufacturer = manufacturer <br>
+                            &emsp;car.color = color<br>
+                            &emsp;return car<br>
+                        }<br>
+                        // Calling the function<br>
+                        const bigBertha = Car("Montero", "Mitsubishi", "silver")<br>
+                        console.log(bigBertha); //Output { model:"Montero", manufacturer:"Mitsubishi", color:"silver" }<br>
+                        </p>
+                        <h4 class="text-center">Inheritance</h4>
+                        <p>In class-based object-oriented languages, Inheritance is when one object acquires all the 
+                            properties and behaviors of another object. However, JavaScript is not class-based, so Javascript 
+                            works on a prototype chain. <br>
+                        <a href="https://tinyurl.com/yyw2p58s">www.freecodecamp.org</a>
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

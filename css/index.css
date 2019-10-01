@@ -6,11 +6,12 @@ div#left {
     margin-right:10%;
 }
 
+
 .jumbotron {
     background-color:rgb(72, 102, 128);
 }
 
-.jumbotron .h1, .jumbotron h1 {
+.jumbotron .h2, .jumbotron h2 {
     color: rgb(243, 235, 235);
 }
 

@@ -1,6 +1,8 @@
 
 div.jumbotron {
+    padding-top: 5.5%;
     background-color:rgb(72, 102, 128);
+    margin: 0;
 }
 
 .jumbotron .h2, .jumbotron h2 {
@@ -9,4 +11,24 @@ div.jumbotron {
 
 body {
     background-color: rgb(243, 235, 235);
+}
+
+#main {
+    background-color:rgb(62, 72, 80);
+    color: rgb(243, 235, 235);
+    padding: 5%;
+}
+
+#code {
+    background:rgb(243, 235, 235);
+    color:rgb(62, 72, 80);
+    padding: 10px;
+    margin: 10px;
+    font-family: "Courier New", Courier, monospace;
+    
+}
+
+h4 {
+    padding-top:5%;
+    padding-bottom:2%;
 }
