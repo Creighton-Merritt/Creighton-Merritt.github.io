@@ -1,0 +1,12 @@
+
+div.jumbotron {
+    background-color:rgb(72, 102, 128);
+}
+
+.jumbotron .h2, .jumbotron h2 {
+    color: rgb(243, 235, 235);
+}
+
+body {
+    background-color: rgb(243, 235, 235);
+}

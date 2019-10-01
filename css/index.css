@@ -5,3 +5,19 @@
 div#left {
     margin-right:10%;
 }
+
+.jumbotron {
+    background-color:rgb(72, 102, 128);
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    color: rgb(243, 235, 235);
+}
+
+body {
+    background-color: rgb(243, 235, 235);
+}
+
+a {
+    color: rgb(70, 126, 175);
+}
