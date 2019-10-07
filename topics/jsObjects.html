@@ -85,8 +85,15 @@
                         <h4 class="text-center">Inheritance</h4>
                         <p>In class-based object-oriented languages, Inheritance is when one object acquires all the 
                             properties and behaviors of another object. However, JavaScript is not class-based, so Javascript 
-                            works on a prototype chain. <br>
-                        <a href="https://tinyurl.com/yyw2p58s">www.freecodecamp.org</a>
+                            works on a prototype reference chain that goes in the opposite direction as traditional inheritance. <br><br>
+                            In the example below, the Animal and Rabbit classes function just fine on their own. Each class calls it's own
+                            constructor to create the object. However, since a rabbit is an animal, we might want to have access to the "run" 
+                            function in Animal. <br><br> If we declare the Rabbit class with the keyword "extends" (shown below), it associates class Rabbit with 
+                            class Animal. When the constructor for Rabbit is called, javaScript will take methods from the Animal class if it doesn't 
+                            already exist in the Rabbit class.
+                            <p id="code">class Animal {<br>&emsp;constructor(){...}<br>&emsp;run() {...}<br>&emsp;stop() {...}<br>}<br>
+                            <br>class Rabbit extends Animal {<br>&emsp;constructor(){...}<br>&emsp;hide() {...}<br>}</p>
+                        <img src="../images/prototype.png" alt width="454" height="388">
                         </p>
                 </div>
             </div>

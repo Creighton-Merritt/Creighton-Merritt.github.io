@@ -2,11 +2,6 @@
     margin-left:20%;
 }
 
-div#left {
-    margin-right:10%;
-}
-
-
 .jumbotron {
     background-color:rgb(72, 102, 128);
 }
@@ -17,6 +12,7 @@ div#left {
 
 body {
     background-color: rgb(243, 235, 235);
+    font-size: 18px;
 }
 
 a {
