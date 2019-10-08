@@ -18,8 +18,49 @@
                 <div class="col-sm-6">
                     <div id="main">
                         <h4 class="text-center">Objects</h4>
-                        <p></p>
-
+                        <p>JSON stands for "Javascript Object Notation". It is used for storing and sending data from a server
+                            to a web page. JSON files can contain objects or arrays. Objects are defined with curly braces and 
+                            arrays are defined with square brackets. 
+                        </p>                        
+                        <p>Objects</p>
+                        <p id="code">{"firstName":"Merritt", "lastName":"Creighton"}</p>
+                        <p>Arrays</p>
+                        <p id="code">{"boat_ratings": [<br>&emsp;
+                                {<br>
+                                  &emsp;&emsp;"BoatType": "14 (Int.)",<br>
+                                  &emsp;&emsp;"BoatCode": "14",<br>
+                                  &emsp;&emsp;"DPN": "85.3",<br>
+                                  &emsp;&emsp;"A": "86.9",<br>
+                                  &emsp;&emsp;"B": "85.4",<br>
+                                  &emsp;&emsp;"C": "84.2",<br>
+                                  &emsp;&emsp;"D": "84.1"<br>
+                                  &emsp;},<br>
+                                  &emsp;{<br>
+                                    &emsp;&emsp;"BoatType": "29er",<br>
+                                    &emsp;&emsp;"BoatCode": "29",<br>
+                                    &emsp;&emsp;"DPN": "84.5",<br>
+                                    &emsp;&emsp;"A": "85.8",<br>
+                                    &emsp;&emsp;"B": "84.7",<br>
+                                    &emsp;&emsp;"C": "83.9",<br>
+                                    &emsp;&emsp;"D": "78.9"<br>
+                                    &emsp;}<br>
+                                    &emsp;]<br>
+                        }</p><br>
+                        <h4 class="text-center">Parsing JSON</h4>
+                        <p>Json is used to exchange data between the server and the user. 
+                            The JSON data received from the server is in string format, and needs to be parsed to become a JavaScript object. 
+                            This can be done by using the JSON.parse() method.</p>
+                            Let's say that we want to get info on a student. We query the server and the server returns this JSON string:
+                            <p id="code">'{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}'</p>
+                            <p>Now use the JSON.parse() method to convert the text into a JavaScript object is:</p>
+                            <p id="code">var studentObj = JSON.parse('{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}');</p>
+                            <p>The whole string is now a JavaScript object. We can access the values with the . notation</p>
+                            <p id="code">console.log(studentObj.name);    // Output Merritt</p>
+                            <h4 class="text-center">Stringify</h4>
+                            <p>The JSON.stringify() method will convert a JavaScript object into a string. If we wanted to change our new studentobj 
+                                back into a string we would do this:</p>
+                            <p id="code">var studentDataString = JSON.stringify(studentObj);<br>
+                                    console.log(studentDataString);   // Output '{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}'</p>
                     </div>
                 </div>
             </div>
