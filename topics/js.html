@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/js.css">
+    
+    <title>More Javascript</title>
+
+    <div class="jumbotron text-center">
+            <h2>JavaScript</h1>
+    </div>
+</head>
+<body>    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div id="main">
+                    <h4 class="text-center">Loops</h4>
+                    <p>In Javascript, a loop is a feature that faciliatates the execution of a set of commands or functions repeatedly 
+                        while the condition evaluates to true. There are several different types of loops. <br>
+                    </p>
+                    <p>For Loop: loops through a block of code a specified number of times</p>
+                    <p id="code"><span id="var">for</span> (i = 0; i &lt; 5; i++) { <br>
+                                    &emsp; console.log(i); <br>
+                                } <br>
+                    </p>
+
+                    <p>While Loop: loops through a block of code while a specified condition is true</p>
+                    <p id="code"><span id="var">var</span> i = 0; <br>
+                        <span id="var">while</span> (i &lt; 5) { <br>
+                            &emsp; console.log(i); <br>
+                            &emsp; i++; <br>
+                        } <br>
+                    </p>                 
+
+                    <p>Do/While Loop: loops through a block of code once, then repeates the loop if the specified condition is still true</p>
+                    <p id="code"><span id="var">var</span> i = 0; <br>
+                        <span id="var">do</span> { <br>
+                            &emsp; console.log(i); <br>
+                            &emsp; i++; <br>
+                        } <br>
+                        <span id="var">while</span> (i &lt; 5) <br>
+                    </p>
+                    <p>Output for all 3 loops</p>
+                    <p id="code">console:<br>
+                        <span id="var">0<br>1<br>2<br>3<br>4<br></span>
+                    </p>
+
+                    <h4 class="text-center">Conditional Statements: If, Else, Else If</h4>
+                    <p>The 'If' statement can be used if you want to check one specific condition</p>
+                    <p id="code">
+                        <span id="var">if</span> (condition) { <br>
+                           &emsp;// code to be executed if condition is true; <br>
+                        }
+                    </p>
+                    <p>The 'If/Else' statement can be used if you have to check two conditions and execute different set of codes</p>
+                    <p id="code">
+                        <span id="var">if</span> (condition) { <br>
+                            &emsp;// code to be executed if condition is true; <br>
+                        } <br>
+                        <span id="var">else</span> { <br>
+                            &emsp;// code to be executed if condition is false; <br>
+                        } <br>
+                    </p>
+                    <p>The 'If/Else If/Else' statement can be used if you want to check more than two conditions</p>
+                    <p id="code">
+                        <span id="var">if</span> (condition1) { <br>
+                            &emsp;// code to be executed if condition1 is true; <br>
+                        } <br>
+                        <span id="var">else if</span> (condition2) { <br>
+                            &emsp;// code to be executed if condition2 is true; <br>
+                        } <br>
+                        <span id="var">else</span> { <br>
+                            &emsp;// code to be executed if both conditions are false<br>
+                        } <br>
+                    </p>
+                    <h4 class="text-center">Functions & Parameters</h4>
+                    <p>A Javascript function is a block of code designed to perform a particular task. It is executed when something
+                        else calls it. It is defined with the <span id="var">function</span> keyword, followed by a name and parenthese ().
+                        If the function has parameters they should be separated by commas.
+                    </p>
+                    <p id="code"><span id="var">function</span> name(parameter1, paremeter2) { <br>
+                        &emsp;// code to be executed <br>
+                    } <br>
+                    </p>
+                    <h4 class="text-center">Variables</h4>
+                    <p>Javascript variables are containers for storing data values. Unlike c++, variables do not need
+                        to declare a type such as <span id="var">int</span>, <span id="var">string</span>, <span id="var">char</span>, etc.  Rather,
+                        a variable is declared with the keyword <span id="var">var</span>.
+                    </p>
+                    <p id="code"><span id="var">var</span> myName = "Merritt"; <br>
+                        <span id="var">var</span> myAge = 39; <br>
+                    </p>
+                    <h4 class="text-center">Arrays and Associative Arrays</h4>
+                    <p>An array is a single variable that is used to store multiple elements. We can store different types of
+                        elements in a single array. The elements in an array are accessing using [].
+                    </p>
+                    <p id="code"><span id="var">var</span> cars = []; <br>
+                        // initialize while declaring <br>
+                        <span id="var">var</span> cars = ["Subaru", "Mitsubishi", "Scion", 3]; <br>
+                        // initialize after declaring <br>
+                        cars[0] = "Subaru"; <br>
+                        cars[1] = "Mitsubishi"; <br>
+                        cars[2] = "Scion";<br>
+                        cars[3] = 3; <br>
+                    </p>
+                    <p>Associative arrays are really Javascript objects. We can create an associative array using Object().</p>
+                    <p id="code"><span id="var">var</span> obj = <span id="var">new</span> Object(); <br>
+                       &emsp; obj["one"] = 1; <br>
+                       &emsp; obj["two"] = 2; <br>
+                       &emsp; obj["three"] = 3; <br>
+                       for(var i in obj) <br>
+                       {<br>
+                           &emsp; console.log(obj[i]); <br>
+                       }<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

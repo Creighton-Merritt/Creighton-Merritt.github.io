@@ -53,14 +53,14 @@
                             Let's say that we want to get info on a student. We query the server and the server returns this JSON string:
                             <p id="code">'{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}'</p>
                             <p>Now use the JSON.parse() method to convert the text into a JavaScript object is:</p>
-                            <p id="code">var studentObj = JSON.parse('{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}');</p>
+                            <p id="code"><span id="var">var</span> studentObj = JSON.parse('{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}');</p>
                             <p>The whole string is now a JavaScript object. We can access the values with the . notation</p>
-                            <p id="code">console.log(studentObj.name);    // Output Merritt</p>
+                            <p id="code">console.log(studentObj.name);    <br><br>// Output Merritt</p>
                             <h4 class="text-center">Stringify</h4>
                             <p>The JSON.stringify() method will convert a JavaScript object into a string. If we wanted to change our new studentobj 
                                 back into a string we would do this:</p>
-                            <p id="code">var studentDataString = JSON.stringify(studentObj);<br>
-                                    console.log(studentDataString);   // Output '{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}'</p>
+                            <p id="code"><span id="var">var</span> studentDataString = JSON.stringify(studentObj);<br>
+                                    console.log(studentDataString);   <br><br>// Output '{ "name":"Merritt", "age":22, "city":"Salt Lake City", "degree":"Software Engineering"}'</p>
                     </div>
                 </div>
             </div>

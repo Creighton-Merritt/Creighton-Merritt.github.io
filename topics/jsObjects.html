@@ -27,20 +27,20 @@
                         <br><br>
                         Examples of primitive values:</p>
                     <p id="code">
-                        Boolean(true); <br>
-                        String(&ldquo;abc&rdquo;); <br>
-                        Number(123);</p> <br>
+                        <span id="var">Boolean</span>(true); <br>
+                        <span id="var">String</span>(&ldquo;abc&rdquo;); <br>
+                        <span id="var">Number</span>(123);</p> <br>
                     <p>Examples of objects:</p>
-                    <p id="code">new Boolean(true);<br>
-                            new String(“abc”);<br>
-                            new Number(123);</p><br>
+                    <p id="code"><span id="var">new</span> Boolean(true);<br>
+                            <span id="var">new</span> String(“abc”);<br>
+                            <span id="var">new</span> Number(123);</p><br>
                     <h4 class="text-center">Object Creation and Properties</h4>
                     <p>An object can be created with an object literal, where the property and values are defined at
                         declaration in curly braces and separated by a comma. The properties of the javascript object 
                         can be accessed by dot notation or bracket notation</p>
-                    <p id="code">var car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
+                    <p id="code"><span id="var">var</span> car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
                             &emsp;or<br>
-                            var car = {<br>
+                            <span id="var">var</span> car = {<br>
                                &emsp; model: ‘Montero’,<br>
                                &emsp; manufacturer: ’Mitsubishi’<br>
                             };	<br>
@@ -48,20 +48,20 @@
                             console.log(car[‘manufacturer’]);  //Output Mitsubishi<br>
                     </p>
                     <p>Additional properties can be added after creation using the dot notation</p>
-                    <p id="code">var car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
+                    <p id="code"><span id="var">var</span> car = {model: ‘Montero’, manufacturer: ’Mitsubishi’}; <br>
                             car.color = “Silver”;
                     </p>
                     <p>Objects can also be created with a constructor</p>
-                    <p id="code">function Car(model, manufacturer) { <br>
-                            &emsp;this.model = model;<br>
-                            &emsp;this.manufacturer = manufacturer;<br>
+                    <p id="code"><span id="var">function</span> Car(model, manufacturer) { <br>
+                            &emsp;<span id="var">this</span>.model = model;<br>
+                            &emsp;<span id="var">this</span>.manufacturer = manufacturer;<br>
                         }<br>
-                        var car1 = new Car(“Montero”, “Mitsubishi”);
+                        <span id="var">var</span> car1 = new Car(“Montero”, “Mitsubishi”);
                     </p>
                     <h4 class="text-center">Object Methods</h4>
                     <p>Methods can be created for an objecting using function()</p>
-                    <p id="code">car.description = function() { <br>
-                            &emsp;return this.manufacturer + ‘ ‘ + this.model + ‘ ‘ + this.color; <br>
+                    <p id="code">car.description = <span id="var">function</span>() { <br>
+                            &emsp;return <span id="var">this</span>.manufacturer + ‘ ‘ + <span id="var">this</span>.model + ‘ ‘ + <span id="var">this</span>.color; <br>
                         };
                     </p>
                     <p>Object methods can be accessed with the syntax objectName.methodName();</p>
@@ -71,15 +71,15 @@
                         above example of the car object), one should encapsulate the logic inside a function 
                         that can called whenever needed to create a new car. This is called Functional 
                         Instantiation and is basically a constructor function.</p>
-                    <p id="code">function Car (model, manufacturer, color) { <br>
-                            &emsp;var car = {}<br>
-                            &emsp;car.model = model<br>
-                            &emsp;car. manufacturer = manufacturer <br>
-                            &emsp;car.color = color<br>
-                            &emsp;return car<br>
+                    <p id="code"><span id="var">function</span> Car (model, manufacturer, color) { <br>
+                            &emsp;<span id="var">var</span> car = {};<br>
+                            &emsp;car.model = model;<br>
+                            &emsp;car. manufacturer = manufacturer; <br>
+                            &emsp;car.color = color;<br>
+                            &emsp;<span id="var">return</span> car;<br>
                         }<br>
                         // Calling the function<br>
-                        const bigBertha = Car("Montero", "Mitsubishi", "silver")<br>
+                        <span id="var">const</span>  bigBertha = Car("Montero", "Mitsubishi", "silver")<br>
                         console.log(bigBertha); //Output { model:"Montero", manufacturer:"Mitsubishi", color:"silver" }<br>
                         </p>
                         <h4 class="text-center">Inheritance</h4>
@@ -91,8 +91,8 @@
                             function in Animal. <br><br> If we declare the Rabbit class with the keyword "extends" (shown below), it associates class Rabbit with 
                             class Animal. When the constructor for Rabbit is called, javaScript will take methods from the Animal class if it doesn't 
                             already exist in the Rabbit class.
-                            <p id="code">class Animal {<br>&emsp;constructor(){...}<br>&emsp;run() {...}<br>&emsp;stop() {...}<br>}<br>
-                            <br>class Rabbit extends Animal {<br>&emsp;constructor(){...}<br>&emsp;hide() {...}<br>}</p>
+                            <p id="code"><span id="var">class</span> Animal {<br>&emsp;constructor(){...}<br>&emsp;run() {...}<br>&emsp;stop() {...}<br>}<br>
+                            <br><span id="var">class</span> Rabbit extends Animal {<br>&emsp;constructor(){...}<br>&emsp;hide() {...}<br>}</p>
                         <img src="../images/prototype.png" alt width="454" height="388">
                         </p>
                 </div>
