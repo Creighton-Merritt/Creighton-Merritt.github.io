@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/ajax.css">
+    <script>
+        function getJson () {
+    var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+
+xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.txt", true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementByID('display').innerHTML = out;
+}
+}
+    </script>
+    <title>CSS and Javascript</title>
+    <div class="jumbotron text-center">
+            <h2>Ajax</h1>
+    </div>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-7">
+                <div id="main">
+                    <h4 class="text-center">Using AJAX to Request JSON Data</h4>
+                        <p>AJAX utilizes a XMLHttpRequest object to request data from a server. The XMLHttpRequest object can be used to exchange
+                            data with a server in the background without having to reload the whole page.<br>
+                            Syntax for creating a new XMLHttpRequest object is <i><b>variable = new XMLHttpRequest();</b></i><br><br>
+                        Example:</p>
+                       <p id="code">var xhttp = new XMLHttpRequest();
+                       </p><br>
+                       <p>Here is an example of how to read JSON data using XMLHttp:</p>
+                       <p id="code">
+                            var xmlhttp = new XMLHttpRequest();<br>
+                            var url = "../fruit.txt";<br><br>
+                            xmlhttp.onreadystatechange = function() {<br>
+                                &emsp; if (this.readyState == 4 && this.status == 200) { <br>
+                                    &emsp;&emsp;var myArr = JSON.parse(this.responseText); <br>
+                                    &emsp;&emsp;myFunction(myArr); <br>
+                                    &emsp;}<br>
+                            };<br>
+                            xmlhttp.open("GET", url, true);<br>
+                            xmlhttp.send();<br><br>
+
+                            function myFunction(arr) {<br>
+                                &emsp; var out = ""; <br>
+                                &emsp; var i; <br>
+                                &emsp; for(i = 0; i &lt; arr.length; i++) { <br>
+                                &emsp;&emsp; out += '&lt;a href="' + arr[i].url + '"&gt;' + <br>
+                                &emsp;&emsp; arr[i].display + '&lt;/a&gt;&lt;br&gt;';<br>
+                                &emsp;}<br>
+                                &emsp;document.getElementById(id).innerHTML = out;<br>
+                            }<br>
+                        </p><br>
+                        <p>Output:</p>
+                        <div id="code">
+                            <button type="button" onclick="getJson()">Get JSON</button>
+                            <div id="display">
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
