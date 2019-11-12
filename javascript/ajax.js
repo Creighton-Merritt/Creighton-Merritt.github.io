@@ -8,7 +8,7 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.txt", true);
+xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.json", true);
 xmlhttp.send();
 
 function myFunction(arr) {
