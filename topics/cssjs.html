@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/cssjs.css">
+    <script src="../javascript/cssjs.js"></script>
+    <title>CSS and Javascript</title>
+    <div class="jumbotron text-center">
+            <h2>Manipulating CSS Class Property Using JavaScript</h1>
+    </div>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-7">
+                <div id="main">
+                    <h4 class="text-center">Changing CSS using JavaScript</h4>
+                        <p>We can use JavaScript to change the CSS properties by using the HTML DOM to change the style of HTML elements. 
+                            Many different style properties can be changed in this way including color, font family, alignment of elements,
+                            and background color. You can find a full list of HTML DOM style objects at 
+                            <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">W3Schools</a></p>
+                        <p>It is done by using this syntax: </p>
+                        <p id="code">document.getElementById(id).style.property = new style<br>
+                        </p><br>
+                        <p>Here you can change the font size of this paragraph element by clicking a button:</p>
+                        <div id="code"><p id="cSize">I want to change the size of this sentence</p>
+                        <button type="button" onclick="changeSize()">Change My Size</button></div><br>
+                        <p>The code for this example is as follows-<br>
+                        HTML:</p>
+                        <p id="code">&lt;p id=&ldquo;cSize&rdquo;&gt;I want to change the size  of this sentence&lt;/p&gt;<br>
+                         &lt;button type=&ldquo;button&rdquo; onclick=&ldquo;changeSize()&rdquo;&gt;Change My Size&lt;/button&gt;</p><br>
+                        <p>Javascript:</p>
+                        <p id="code">function changeSize() { <br>
+                            &emsp;var cSize = document.getElementById("cSize").value; <br>
+                            &emsp;document.getElementById("cSize").style.fontSize = "30px"; <br>
+                           }<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
