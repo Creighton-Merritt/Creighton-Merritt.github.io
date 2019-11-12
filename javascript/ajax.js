@@ -1,6 +1,5 @@
 function getJson () {
     var xmlhttp = new XMLHttpRequest();
-    var url = "data.txt";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -9,7 +8,7 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-xmlhttp.open("GET", url, true);
+xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.txt", true);
 xmlhttp.send();
 
 function myFunction(arr) {
