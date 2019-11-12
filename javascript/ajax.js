@@ -18,6 +18,6 @@ function myFunction(arr) {
         out += '<a href="' + arr[i].url + '">' +
         arr[i].display + '</a><br>';
     }
-    document.getElementByID('display').innerHTML = out;
+    document.getElementById('display').innerHTML = out;
 }
 }
