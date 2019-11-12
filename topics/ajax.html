@@ -8,6 +8,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/ajax.css">
     <!-- <script type="text/javascript" src="../javascript/ajax.js"></script> -->
+    <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    myFunction(myArr);
+                }
+            };
+
+            xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.json", true);
+            xmlhttp.send();
+
+            function myFunction(arr) {
+                var out = "";
+                var i;
+                for(i = 0; i < arr.length; i++) {
+                    out += '<a href="' + arr[i].url + '">' +
+                    arr[i].display + '</a><br>';
+                }
+                document.getElementById("display").innerHTML = out;
+            }
+        </script>
     <title>CSS and Javascript</title>
     <div class="jumbotron text-center">
             <h2>Ajax</h1>
@@ -51,28 +73,7 @@
                         <p>Output:</p>
                         <div id="code">
                             <!-- <button type="button" onclick="getJson()">Get JSON</button><br> -->
-                            <script>
-                                var xmlhttp = new XMLHttpRequest();
-                                xmlhttp.onreadystatechange = function() {
-                                    if (this.readyState == 4 && this.status == 200) {
-                                        var myArr = JSON.parse(this.responseText);
-                                        myFunction(myArr);
-                                    }
-                                };
 
-                                xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.json", true);
-                                xmlhttp.send();
-
-                                function myFunction(arr) {
-                                    var out = "";
-                                    var i;
-                                    for(i = 0; i < arr.length; i++) {
-                                        out += '<a href="' + arr[i].url + '">' +
-                                        arr[i].display + '</a><br>';
-                                    }
-                                    document.getElementById('display').innerHTML = out;
-                                }
-                            </script>
 
                             <div id="display">
                                 
