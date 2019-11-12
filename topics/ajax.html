@@ -32,28 +32,24 @@
                             xmlhttp.onreadystatechange = function() {<br>
                                 &emsp; if (this.readyState == 4 && this.status == 200) { <br>
                                     &emsp;&emsp;var myArr = JSON.parse(this.responseText); <br>
-                                    &emsp;&emsp;myFunction(myArr); <br>
-                                    &emsp;}<br>
-                            };<br>
+                                    &emsp;&emsp;do {
+                                        &emsp;&emsp;&emsp;results.innerHTML += data.fruits[i] + '<br>';
+                                        &emsp;&emsp;&emsp;i++; <br>
+                                        &emsp;}<br>
+                                        &emsp;&emsp;while (i &gt; 9)<br>
+                                }<br>
+                            }; <br>
+
                             xmlhttp.open("GET", url, true);<br>
                             xmlhttp.send();<br><br>
 
-                            function myFunction(arr) {<br>
-                                &emsp; var out = ""; <br>
-                                &emsp; var i; <br>
-                                &emsp; for(i = 0; i &lt; arr.length; i++) { <br>
-                                &emsp;&emsp; out += '&lt;a href="' + arr[i].url + '"&gt;' + <br>
-                                &emsp;&emsp; arr[i].display + '&lt;/a&gt;&lt;br&gt;';<br>
-                                &emsp;}<br>
-                                &emsp;document.getElementById(id).innerHTML = out;<br>
-                            }<br>
+                            
                         </p><br>
                         <p>Output:</p>
                         <div id="code">
                             <button type="button" onclick="getJson()">Get JSON</button><br>
-                            <div id="display">
-                                
-                            </div>
+                            <div id="display"></div>
+
                         </div>
                 </div>
             </div>
