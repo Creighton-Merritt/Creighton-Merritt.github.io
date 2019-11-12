@@ -1,23 +1,17 @@
 function getJson() {
-var xmlhttp = new XMLHttpRequest();
+    var xmlhttp = new XMLHttpRequest();
+    var results = document.getElementById('display');
 
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-};
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(xmlhttp.responseText);
+            for (i = 0; i < data.length; i++) {
+                results.innerHTML += '<li>' + data[i] + '</li>';
+                console.log(data);
+            }
+        }
+    };
 
-xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.json", true);
-xmlhttp.send();
-
-function myFunction(arr) {
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' +
-        arr[i].display + '</a><br>';
-    }
-    document.getElementById('display').innerHTML = out;
-}
+    xmlhttp.open("GET", "https://creighton-merritt.github.io/topics/data.json", true);
+    xmlhttp.send();
 }
