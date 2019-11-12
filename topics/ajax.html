@@ -28,28 +28,27 @@
                        <p>Here is an example of how to read JSON data using XMLHttp:</p>
                        <p id="code">
                             var xmlhttp = new XMLHttpRequest();<br>
-                            var url = "../fruit.txt";<br><br>
+                            var url = "../fruit.txt";<br>
+                            var results = document.getElementById('display');<br>
+                            var i = 0;<br><br>
                             xmlhttp.onreadystatechange = function() {<br>
                                 &emsp; if (this.readyState == 4 && this.status == 200) { <br>
                                     &emsp;&emsp;var myArr = JSON.parse(this.responseText); <br>
-                                    &emsp;&emsp;do {
-                                        &emsp;&emsp;&emsp;results.innerHTML += data.fruits[i] + '<br>';
+                                    &emsp;&emsp;do { <br>
+                                        &emsp;&emsp;&emsp;results.innerHTML += data.fruits[i] + '&lt;br&gt;'; <br>
                                         &emsp;&emsp;&emsp;i++; <br>
-                                        &emsp;}<br>
+                                        &emsp;&emsp;}<br>
                                         &emsp;&emsp;while (i &gt; 9)<br>
-                                }<br>
-                            }; <br>
+                                        &emsp;}<br>
+                            }; <br><br>
 
                             xmlhttp.open("GET", url, true);<br>
-                            xmlhttp.send();<br><br>
-
-                            
+                            xmlhttp.send();<br>
                         </p><br>
                         <p>Output:</p>
                         <div id="code">
                             <button type="button" onclick="getJson()">Get JSON</button><br>
                             <div id="display"></div>
-
                         </div>
                 </div>
             </div>
