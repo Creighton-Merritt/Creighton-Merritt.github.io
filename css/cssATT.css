@@ -1,0 +1,80 @@
+div.jumbotron {
+    background-color:rgb(72, 102, 128);
+    margin: 0;
+}
+
+.jumbotron .h2, .jumbotron h2 {
+    color: rgb(243, 235, 235);
+}
+
+body {
+    background-color: rgb(243, 235, 235);
+}
+
+#main {
+    background-color:rgb(62, 72, 80);
+    color: rgb(243, 235, 235);
+    padding: 5%;
+}
+
+#code {
+    background:rgb(10, 10, 10);
+    color:rgb(153, 153, 153);
+    padding: 10px;
+    margin: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#var {
+    color:rgb(161, 127, 168);
+}
+
+h4 {
+    padding-top:5%;
+    padding-bottom:2%;
+}
+
+.transition {
+    width: 200px;
+    height:100px;
+    background: white;
+    transition: width 2s;
+}
+
+.transition:hover {
+    width: 400px;
+}
+
+.transform {
+    width: 200px;
+    height: 100px;
+    background: white;
+    transition: 1s;
+}
+
+.transform:hover {
+    transform: skew(15deg, 15deg);
+}
+
+.animation {
+    color: white;
+    animation-name: stretch;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 3s;
+    animation-iteration-count: 6;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+  }
+  @keyframes stretch{
+    0%   {
+      letter-spacing:1.2em;
+      color: rgb(221, 181, 221);
+    }
+    100%   {
+      letter-spacing:0.1em;
+      color: white;
+    }
+}
+
+/* Animation example adapted from https://www.quackit.com/css/css3/properties/css_animation-direction.cfm */
