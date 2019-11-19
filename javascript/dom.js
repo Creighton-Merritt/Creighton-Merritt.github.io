@@ -34,3 +34,23 @@ for (let i = 0; i < students.length; i++) {
 
     document.getElementById("students").appendChild(tr);
 }  
+
+// students.forEach(
+//     (student) => {
+//     let tr = document.createElement("tr");
+
+//     let tdFirstName = document.createElement("td");
+//     let tdLastName = document.createElement("td");
+//     let tdiNumber = document.createElement("td");
+
+//     tdFirstName.innerHTML = students.firstName;
+//     tdLastName.innerHTML = students.lastName;
+//     tdiNumber.innerHTML = students.iNumber;
+
+//     tr.appendChild(tdFirstName);
+//     tr.appendChild(tdLastName);
+//     tr.appendChild(tdiNumber);
+
+//     document.getElementById("students").appendChild(tr);
+//     }
+// )

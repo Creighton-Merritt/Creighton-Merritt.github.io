@@ -16,7 +16,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-8">
-                <p></p>
+                <p>I learned something new and pretty cool this week. As I was following along with Bro. Thayne's video demonstrating 
+                    DOM manipulation, I kept getting the error "Cannot read property 'appendChild' of null". I was doing the exact same thing as Bro.
+                    Thayne, so I was pretty confused. But I found the answer on stack overflow. Since I have the script tag above the 
+                    html body, the JavaScript tries to execute before the rest of the page loads, so there is no table to add to. That
+                    is when I learned that you can add 'defer' to the script tag, so that the JavaScript loads later. 
+                </p>
         </div>
     </div>
 </div>    
