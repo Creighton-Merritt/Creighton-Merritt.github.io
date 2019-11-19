@@ -1,56 +1,39 @@
-class Student {
-    constructor(firstName, lastName, iNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.iNumber = iNumber;
+var fruits = 
+    ["apple",
+    "apricot",
+    "avocado",
+    "banana",
+    "bell pepper",
+    "blueberry",
+    "blackberry",
+    "blackcurrant",
+    "blood orange"];
+var int = 0
+
+function addFruit() {
+    if (int < 9) {
+    data = fruits[int];
+    var newItem = document.createElement("LI")
+    var textNode = document.createTextNode(data);
+    newItem.appendChild(textNode);
+
+    var list = document.getElementById("list");
+    list.insertBefore(newItem, list.childNodes[int]);
+    int++;
     }
+}
+
+function addButton() {
     
-};
+    var button = document.createElement("button");
+    button.onclick = function() { addFruit(); };
+    button.innerHTML = "Display Fruits";
+    var div = document.getElementById("newBtn");
+    div.appendChild(button);
+    var text = document.createElement("p");
+    text.innerHTML = "<br>Here we created a new button element and added it into a div using 'appendChild'. Now click on the 'Display Fruits' button a few times to insert the name of fruits above the button using 'insertBefore'";
+    div.appendChild(text);
+    
+}
 
-let students = [
-    new Student('Merritt', 'Creighton', '999'),
-    new Student('Merritt', 'Tuley', '999'),
-    new Student('Merritt', 'Ann', '999'),
-    new Student('Merritt', 'D\'Albini', '999'),
-    new Student('Merritt', 'Pederson', '999')
-];
 
-console.table(students);
-
-for (let i = 0; i < students.length; i++) {
-    console.log(i);
-    let tr = document.createElement("tr");
-    let tdFirstName = document.createElement("td");
-    let tdLastName = document.createElement("td");
-    let tdiNumber = document.createElement("td");
-
-    tdFirstName.innerHTML = students[i].firstName;
-    tdLastName.innerHTML = students[i].lastName;
-    tdiNumber.innerHTML = students[i].iNumber;
-
-    tr.appendChild(tdFirstName);
-    tr.appendChild(tdLastName);
-    tr.appendChild(tdiNumber);
-
-    document.getElementById("students").appendChild(tr);
-}  
-
-// students.forEach(
-//     (student) => {
-//     let tr = document.createElement("tr");
-
-//     let tdFirstName = document.createElement("td");
-//     let tdLastName = document.createElement("td");
-//     let tdiNumber = document.createElement("td");
-
-//     tdFirstName.innerHTML = students.firstName;
-//     tdLastName.innerHTML = students.lastName;
-//     tdiNumber.innerHTML = students.iNumber;
-
-//     tr.appendChild(tdFirstName);
-//     tr.appendChild(tdLastName);
-//     tr.appendChild(tdiNumber);
-
-//     document.getElementById("students").appendChild(tr);
-//     }
-// )
