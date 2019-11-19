@@ -31,7 +31,7 @@ function addButton() {
     var div = document.getElementById("newBtn");
     div.appendChild(button);
     var text = document.createElement("p");
-    text.innerHTML = "<br>Here we created a new button element and added it into a div using 'appendChild'. Now click on the 'Display Fruits' button a few times to insert the name of fruits above the button using 'insertBefore'";
+    text.innerHTML = "<br>Here we created a new button element and added it into a div using 'appendChild'. Now click on the 'Display Fruits' button a few times to insert the name of fruits above the button using 'insertBefore'.";
     div.appendChild(text);
     
 }
