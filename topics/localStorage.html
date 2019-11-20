@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/ajax.css">
-    <script type="text/javascript" src="../javascript/localStorage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/js.css">
+    <script type="text/javascript" src="../javascript/localStorage.js" defer></script>
     <title>CSS and Javascript</title>
     <div class="jumbotron text-center">
             <h2>Local Storage</h1>
@@ -18,11 +18,34 @@
         <div class="row justify-content-center">
             <div class="col-sm-7">
                 <div id="main">
-                    <h4 class="text-center">Local Storage</h4>
-                        <p>
-
-
-                        </p>
+                    <h4 class="text-center">Web Storage</h4>
+                        <p>Web storage allows web applications to store data locally within the user's browser. Before
+                            HTML5, data had to be stored in cookies that were included in every server request. Web storage 
+                            can be stored locally, so it is more secure and it does not affect website performance.<br><br>
+                            <ul>
+                                <li>There are two different kinds of web storage: local storage, and session storage.</li>
+                                <li>Session storage will store the data for one session (until the browser tab is closed.) </li>
+                                <li>Local storage data has no expiration date and will persist until it is deleted manually.</li>
+                            </ul>
+                        </p><br>
+                        <p>Syntax for saving data in key-value pairs:</p>
+                        <p id="code">localStorage.setItem("key", "value");<br><br>
+                        localStorage.setItem("firstname", "Merritt");</p><br>
+                        <p>Syntax for saving data as objects:</p>
+                        <p id="code">localStorage.setItem("objects", JSON.stringify(objects));<br><br>
+                            let students = [<br>
+                        &emsp;new Student('Merritt', 'Creighton', '999'),<br>
+                        &emsp;new Student('Merritt', 'Tuley', '999')<br>
+                        ];<br>
+                        localStorage.setItem("students", JSON.stringify(students));</p><br>
+                        <p>Syntax for reading data from local storage:</p>
+                        <p id="code">var getKey = localStorage.getItem("key");</p><br>
+                        <p>Syntax for removing data from local storage:</p>
+                        <p id="code">localStorage.removeItem("key");</p><br>
+                        <p>Click the button below to retreive the contents of an object called "students" and display it.</p>
+                        <button class="button" onclick="display()">Click Me!</button><br><br>
+                        <div id="names">
+                        </div>
                 </div>
             </div>
         </div>
