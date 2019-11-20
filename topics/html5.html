@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/ajax.css">
-    <!-- <script type="text/javascript" src="../javascript/ajax.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../css/js.css">
     <title>HTML5 Media</title>
     <div class="jumbotron text-center">
             <h2>HTML5 Tags for Media</h1>
@@ -18,11 +17,73 @@
         <div class="row justify-content-center">
             <div class="col-sm-7">
                 <div id="main">
-                    <h4 class="text-center">HTML5</h4>
-                        <p></p>
+                    <h4 class="text-center">Video Tag</h4>
+                    <p>The video tag is a standard way to embed a video in a web page. Before HTML5, a video could only be played in a browser with
+                            a plug-in (like flash). There are 3 supported video formats in HTML5: MP4, WebM, and Ogg.
+                            A source tag with the video file must be included with the video tag. Multiple source tags can be used, and the browser 
+                            will use the first recognized format.
+                    </p>
+                    <h4 class="text-center">Attributes</h4>
+                    <p><ul>
+                        <li>The controls attribute adds video controls, like play, pause, and volume.</li>
+                        <li>Autoplay will start the video automatically when the page loads, but autoplay is used instead of the controls attribute, so the user cannot press 
+                                play, pause, or change the volume.</li>
+                        <li>Loop will play the video repeatedly.</li>
+                        <li>Height and width can and should be set, otherwise the page might flicker while the video loads.</li>
+                    </ul></p><br>
+                    <p>Example video tag:</p>
+                    <img src="../images/videotag.jpg" /><br>
+                    <video width="320" height="240" controls >
+                        <source src="../images/Gumball.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="main">
+                    <h4 class="text-center">Canvas Tag</h4>
+                    <p>The canvas tag is used to draw graphics via JavaScript. It is only a container for graphics, JavaScript does the 
+                        actual work. Canvas has methods for drawing paths, boxes, circles, text, and adding images. <br>
+                        Canvas tags should include an id and the width and height for the size of the canvas.
+                    </p><br>
+                    <p>Example canvas tag and JavaScript code to draw a circle:</p>
+                    <img src="../images/canvastag.jpg" /><br><br>
+                    <canvas id="myCanvas" width="300" height="300" style="border:2px dotted white;">
+                            Your browser does not support the canvas element.
+                    </canvas>
+                    <script>
+                        var canvas = document.getElementById("myCanvas");
+                        var ctx = canvas.getContext("2d");
+                        ctx.moveTo(0, 0);
+                        ctx.lineTo(300, 300);
+                        ctx.stroke();
+                    </script>
+                </div>
+                <div id="main">
+                    <h4 class="text-center">Audio Tag</h4>
+                    <p>The audio tag is used for audio. It supports 3 formats: MP3, Ogg, WAV. Just like the video tag, a source tag is 
+                        always needed to specify the audio file.
+                    </p>
+                    <h4 class="text-center">Attributes</h4>
+                    <p>The audio tag has very similar attributes to the video tag.<br>
+                        <ul>
+                            <li>The controls attribute adds audio controls, like play, pause, and volume.</li>
+                            <li>Autoplay will start the audio automatically when the page loads, but autoplay is used instead of the controls attribute, 
+                                so the user cannot press play, pause, or change the volume.</li>
+                            <li>Loop will play the audio repeatedly</li>
+                            <li>Preload is a tag that specifies if and how the author things the audio should be loaded when the page loads.</li>
+                        </ul></p><br>
+                    <p>Example audio tag:</p>
+                    <img src="../images/futurama.jpg" /><br><br>
+                    <audio controls>
+                        <source src="../images/futurama.mp3" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+
+
+
