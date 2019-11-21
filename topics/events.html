@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/js.css">
-    <script type="text/javascript" src="../javascript/events.js"></script>
+    <script type="text/javascript" src="../javascript/events.js" defer></script>
     <title>CSS and Javascript</title>
     <div class="jumbotron text-center">
             <h2>JavaScript Events</h1>
@@ -46,10 +46,11 @@
                             a P element.
                         </p>
                         <p id="code"><span id="var">HTML:</span><br>
-                            &lt;p&gt; name=&ldquo;pBold&rdquo; ontouchstart=&ldquo;makeMeBold()&rdquo;&gt;Touch here to make me bold&lt;/p&gt;<br><br>
+                            &lt;p&gt; name=&ldquo;pBold&rdquo; ontouchstart=&ldquo;changeFont()&rdquo;&gt;Touch here to make me bold&lt;/p&gt;<br><br>
                             <span id="var">JavaScript:</span><br>
 
-                            <p id="code" name="pBold">Touch here to make me Bold</p>
+                            <p id="code" name="pBold" ontouchstart="changeFont()">Touch here to make me Bold</p>
+                            <!-- <button type="button" id="pBold" onclick="changeFont()">Click Me</button> -->
                         </p>
                         
                 </div>

@@ -7,9 +7,7 @@ function changeButton() {
     }
 }
 
-function makeMeBold() {
+function changeFont() {
     var text = document.getElementsByName("pBold");
-    var att = document.createAttribute("style");
-    att.value = "strong";
-    text.setAttributeNode(att);
+    text.style.fontWeight = "bold";
 }
