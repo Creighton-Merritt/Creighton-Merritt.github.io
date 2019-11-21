@@ -8,7 +8,7 @@ function changeButton() {
 }
 
 function makeMeBold() {
-    var text = document.getElementById("pBold");
+    var text = document.getElementsByName("pBold");
     var att = document.createAttribute("style");
     att.value = "strong";
     text.setAttributeNode(att);
