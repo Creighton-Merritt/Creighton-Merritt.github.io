@@ -46,13 +46,14 @@
                             a P element.
                         </p>
                         <p id="code"><span id="var">HTML:</span><br>
-                            &lt;p&gt; name=&ldquo;pBold&rdquo; ontouchstart=&ldquo;changeFont()&rdquo;&gt;Touch here to make me bold&lt;/p&gt;<br><br>
+                            &lt;p id=&ldquo;pBold&rdquo; ontouchstart=&ldquo;changeFont()&rdquo;&gt;Touch here to make me bold&lt;/p&gt;<br><br>
                             <span id="var">JavaScript:</span><br>
-
-                            <p id="code" name="pBold" ontouchstart="changeFont()">Touch here to make me Bold</p>
-                            <!-- <button type="button" id="pBold" onclick="changeFont()">Click Me</button> -->
+                            function changeFont() {<br>
+                                &emsp;var text = document.getElementById("pBold");<br>
+                                &emsp;text.style.fontWeight = "bold";<br>
+                            }<br>
                         </p>
-                        
+                        <p id="pbold" ontouchstart="changeFont">Touch here to make me bold</p>
                 </div>
             </div>
         </div>

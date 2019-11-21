@@ -8,6 +8,6 @@ function changeButton() {
 }
 
 function changeFont() {
-    var text = document.getElementsByName("pBold");
+    var text = document.getElementById("pBold");
     text.style.fontWeight = "bold";
 }
