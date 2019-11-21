@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/ajax.css">
-    <!-- <script type="text/javascript" src="../javascript/ajax.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../css/js.css">
+    <script type="text/javascript" src="../javascript/events.js"></script>
     <title>CSS and Javascript</title>
     <div class="jumbotron text-center">
             <h2>JavaScript Events</h1>
@@ -18,8 +18,38 @@
         <div class="row justify-content-center">
             <div class="col-sm-7">
                 <div id="main">
-                    <h4 class="text-center">D</h4>
-                        <p></p>
+                    <h4 class="text-center">HTML Events</h4>
+                        <p>An HTML event is something that happens to HTML elements, such as an input field being changed, a button being clicked, a 
+                            page loading, or a mouse hovering over an element. There are many different ways to trigger an event. 
+                            JavaScript can be used to react to HTML events and execute code when events are detected.<br><br>
+                        </p>
+                        <h5>onclick</h5>
+                        <p>The onlick event is commonly used for JavaScript to run a function when the user clicks on a button</p>
+                        <p id="code"><span id="var">HTML:</span><br>&lt;button type=&ldquo;button&rdquo; id=&ldquo;btn&rdquo; onclick=&ldquo;changeButton()&rdquo;&gt;Click Me&lt;/button&gt;<br><br>
+                            <span id="var">JavaScript:</span><br>
+                            function changeButton() {<br>
+                                &emsp;var text = document.getElementById("btn");<br>
+                                &emsp;if (text.innerHTML === "Click Me") {<br>
+                                    &emsp;&emsp;text.innerHTML = "Clicked!";<br>
+                                    &emsp;} else {<br>
+                                        &emsp;&emsp;text.innerHTML = "Click Me";<br>
+                                        &emsp;}<br>
+                            }<br><br>
+                            <button type="button" id="btn" onclick="changeButton()">Click Me</button></p><br><br>
+                        <h5>onload</h5>
+                        <p>The onload event will execute JavaScript immediately after a page has been loaded. The event can be used to check the visitor's 
+                            browser type and browser version, and load the proper version of a web page based on the information. It can also be used to check 
+                            if cookies are enabled or if cookies already exist for the user.
+                        </p><br>
+                        <h5>touchstart</h5>
+                        <p>The touchstart event is used for touch screens only i.e. mobile phones and tablets. It executes JavaScript when the user touches 
+                            a P element.
+                        </p>
+                        <p id="code"><span id="var">HTML:</span><br>
+                            &lt;p&gt; id=&ldquo;pBold&rdquo; ontouchstart=&ldquo;makeMeBold()&rdquo;Touch here to make me bold&lt;/p&gt;<br><br>
+                            <span id="var">JavaScript:</span><br>
+                        </p>
+                        
                 </div>
             </div>
         </div>
