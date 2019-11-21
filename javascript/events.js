@@ -7,9 +7,3 @@ function changeButton() {
     }
 }
 
-function changeFont() {
-    var text = document.getElementById("pBold");
-    var att = document.createAttribute("style");
-    att.value = "bold";
-    text.setAttribute(att);
-}
