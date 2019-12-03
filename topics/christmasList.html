@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../javascript/christmas.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>List</title>
+    <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-4">Merritt's Christmas List</h1> 
+        </div>
+    </div>
+
+</head>
+<body onload="display()"> 
+    <div class="col-md-4">
+        <strong>Add to list: </strong><input type="text" class="itemName"  name="itemName" id="itemName" required>
+        <button type="submit" value="submit" onclick="addToList()">Add</button><br><br>
+    </div><br>
+    <div class="col-md-4">
+        <table class="table table-striped" id="table">
+            <thead>
+                <tr>
+                    <th scope="col-md-3">Item</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>   
+    </div> 
+</body>
+</html>
+
