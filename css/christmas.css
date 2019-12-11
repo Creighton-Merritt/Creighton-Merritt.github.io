@@ -1,4 +1,7 @@
-
+body {
+    font-family: Candara;
+    font-size:130%;
+}
 /* Animate the heading */
 #animation {
     color: black;
@@ -22,7 +25,7 @@
 
 /* Margin for checkbox so it's not so close to the value */
 input[type="radio"]{
-    margin: 0 10px 0 10px;
+    margin: 0 15px 0 10px;
 }
 
 /* Transform the checkbox when hovering so it's easier to see which one you are about to select. */
