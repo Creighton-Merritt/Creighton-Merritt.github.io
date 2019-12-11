@@ -33,6 +33,7 @@ $(document).ready(function(){
                 localArr = JSON.parse(localStorage.getItem('localArr')) || [];
                 if($selected == localArr[i]) {
                     localArr.splice(i,1);
+                    console.log(localArr);
                     localStorage.setItem("localArr", JSON.stringify(localArr));
                     return false;
                 }
