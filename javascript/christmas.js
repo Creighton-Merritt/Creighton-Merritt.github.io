@@ -16,6 +16,7 @@ $(document).ready(function(){
         if(itemName != "") {
             localArr = JSON.parse(localStorage.getItem('localArr')) || [];
             localArr.push(itemName);
+            console.log(localArr);
             localStorage.setItem("localArr", JSON.stringify(localArr));
             var markup = "<tr><td><input type='radio' id='radio' name='record' value='"+itemName+"'>"+itemName+"</td></tr>";
             $("#tableBody").append(markup);

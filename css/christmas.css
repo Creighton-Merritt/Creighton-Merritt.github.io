@@ -2,6 +2,12 @@ body {
     font-family: Candara;
     font-size:130%;
 }
+
+#table, #button, strong {
+  margin-left: 5%;
+}
+
+
 /* Animate the heading */
 #animation {
     color: black;
