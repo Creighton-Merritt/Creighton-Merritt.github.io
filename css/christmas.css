@@ -1,0 +1,37 @@
+
+/* Animate the heading */
+#animation {
+    color: black;
+    animation-name: stretch;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 3s;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+  }
+  @keyframes stretch{
+    0%   {
+      letter-spacing:.2em;
+      color: rgb(219, 163, 219);
+    }
+    100%   {
+      color: black;
+    }
+}
+
+/* Margin for checkbox so it's not so close to the value */
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+}
+
+/* Transform the checkbox when hovering so it's easier to see which one you are about to select. */
+#radio:hover {
+    transform: scale(1.4);
+    filter: brightness(85%);
+}
+
+/* Transition button moves the row to the right after clicked, making the selected value more obvious */
+#radio:checked {
+    margin-left: 100px;
+}

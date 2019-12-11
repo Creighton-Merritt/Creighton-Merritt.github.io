@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../javascript/christmas.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <title>List</title>
+    <link rel="stylesheet" href="../css/christmas.css">
     <div class="jumbotron">
         <div class="container">
-          <h1 class="display-4">Merritt's Christmas List</h1> 
+          <h1 class="display-4" id="animation">Merritt's Christmas List</h1> 
         </div>
     </div>
 
 </head>
-<body onload="display()"> 
+<body > 
     <div class="col-md-4">
         <strong>Add to list: </strong><input type="text" class="itemName"  name="itemName" id="itemName" required>
-        <button type="submit" value="submit" onclick="addToList()">Add</button><br><br>
+        <button type="submit" value="submit" class="add-row">Add</button><br><br>
     </div><br>
     <div class="col-md-4">
         <table class="table table-striped" id="table">
@@ -28,7 +30,8 @@
             </thead>
             <tbody id="tableBody">
             </tbody>
-        </table>   
+        </table> 
+        <button type="button" id="button" class="delete-row">Delete Item</button>
     </div> 
 </body>
 </html>
