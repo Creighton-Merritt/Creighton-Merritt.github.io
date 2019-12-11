@@ -21,6 +21,7 @@ $(document).ready(function(){
             $("#tableBody").append(markup);
         }
         document.getElementById("itemName").value = "";
+        $('#itemName').focus();
     });
 
   //  Delete all checked rows and remove them from local storage using 'splice'
